@@ -122,6 +122,9 @@ if [ -z "$CONFIG_PATH" ]; then
         CONFIG_PATH="$REL_DIR/sys.config"
     fi
 fi
+echo " robotarmy bughunt"
+echo "config path :"
+echo $CONFIG_PATH
 
 if [ $RELX_REPLACE_OS_VARS ]; then
     awk '{while(match($0,"[$]{[^}]*}")) {var=substr($0,RSTART+2,RLENGTH -3);gsub("[$]{"var"}",ENVIRON[var])}}1' < $CONFIG_PATH > $CONFIG_PATH.2.config
