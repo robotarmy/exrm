@@ -83,6 +83,10 @@ generate_config() {
     local conf_file="$REL_DIR/$REL_NAME.conf"
     local schema_file="$REL_DIR/$REL_NAME.schema.exs"
     local sys_config="$REL_DIR/sys.config"
+    echo "robotarmy bughunt --- config not generating as expected"
+    echo $schema_file
+    echo $conf_file
+    echo $sys_config
     if [ -f "$schema_file" ]; then
         result="$("$BINDIR/escript" "$ROOTDIR"/bin/conform --conf "$conf_file" --schema "$schema_file" --config "$sys_config" --output-dir "$REL_DIR")"
         exit_status="$?"
