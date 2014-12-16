@@ -86,7 +86,7 @@ generate_config() {
     echo "robotarmy bughunt --- config not generating as expected"
     echo $schema_file
     echo $conf_file
-    cat $conf_file
+    command cat $conf_file
     echo $sys_config
     command cat $sys_config
     echo "---"
