@@ -97,6 +97,9 @@ generate_config() {
             exit "$exit_status"
         fi
     fi
+    echo "+ generated config +"
+    echo $sys_config
+    command cat $sys_config
 }
 
 # Use $CWD/vm.args if exists, otherwise releases/VSN/vm.args
