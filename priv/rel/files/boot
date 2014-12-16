@@ -87,7 +87,7 @@ generate_config() {
     echo $schema_file
     echo $conf_file
     echo $sys_config
-    cat $sys_config
+    command cat $sys_config
     echo "---"
     if [ -f "$schema_file" ]; then
         result="$("$BINDIR/escript" "$ROOTDIR"/bin/conform --conf "$conf_file" --schema "$schema_file" --config "$sys_config" --output-dir "$REL_DIR")"
